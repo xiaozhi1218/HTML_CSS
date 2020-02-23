@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 
+    1、生成后代元素：> 大于号表示后面要生成的内容是当前标签的后代，
+    命令：nav>ul>li-->
+  <nav>
+    <ul>
+      <li></li>
+    </ul>
+  </nav>
+
+  <!-- 2、生成兄弟元素：+ 加号表示后面的元素和前面的元素是兄弟元素，
+    命令：div+p+bq -->
+  <div></div>
+  <div></div>
+  <p></p>
+
+  <!--  3、生成上级元素：^ 表示^后面的元素与^前面的元素的父元素是平级，即兄弟元素。
+    一个^表示提升一个层级，两个提升两级，
+    命令：div+div>p>span+em^bq -->
+  <div></div>
+  <div>
+    <p><span></span><em></em></p>
+    <blockquote></blockquote>
+  </div>
+  <!-- 4、生成类名： .    Emmet 默认的标签为 div ，如果我们不给出标签名称的话，默认就生成 div 标签。
+    Emmet会根据父标签进行判定。比如在<ul>中输入.item，就会生成<li class="item"></li> -->
+  <ul>
+    <li class="item"></li>
+  </ul>
+
+  <!-- 5、生成ID：#，命令：#container -->
+  <div id="first"></div>
+
+  <!-- 6、生成分组：()    用括号进行分组，这样可以更加明确要生成的结构，特别是层次关系
+    命令：(.foo>h1)+(.bar>h2)   -->
+  <div class="foo">
+    <h1></h1>
+  </div>
+  <div class="bar">
+    <h2></h2>
+  </div>
+
+  <!-- 7、重复生成多份：*   *号后面是想重复生成的份数
+    命令：ul>li*5  -->
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <!-- 8、对生成内容依次编号：$    $就表示一位数字，只出现一个的话，就从1开始。
+    如果出现多个，就从0开始。如果我想生成三位数的序号，那么要写三个$
+    命令：ul>li.item$*5 
+    同样，我们也可以使用 @N 指定开始的序号
+    命令：ul>li.item$@3*5 -->
+  <ul>
+    <li class="item1"></li>
+    <li class="item2"></li>
+    <li class="item3"></li>
+    <li class="item4"></li>
+    <li class="item5"></li>
+  </ul>
+
+  <ul>
+    <li class="item3"></li>
+    <li class="item4"></li>
+    <li class="item5"></li>
+    <li class="item6"></li>
+    <li class="item7"></li>
+  </ul>
+
+  <!-- 9、生成自定义属性：[attr]   中括号里面的内容是你想添加的属性
+    命令：td[rowspan=2 colspan=3 title]  -->
+
+  <td rowspan="2" clospan="3" title=""></td>
+
+  <!-- 10、生成文本内容：{}  大括号里面是你想添加的文本内容
+    命令：a{Click me} -->
+  <a href="#">clink me</a>
+  <a href="#">clink me</a>
+
+  <!-- 练习 -->
+  <!-- 1.ul>li.item${exer$}*3 -->
+  <ul>
+    <li class="item1">exer1</li>
+    <li class="item2">exer2</li>
+    <li class="item3">exer3</li>
+  </ul>
+
+  <!-- 其他 
+    命令：link 
+    命令：script:src
+    命令：img
+    命令：inp
+    命令：input:p
+    命令：btn btn:s btn:r
+    单位：
+        p 表示%
+        e 表示 em
+        r表示 rem
+    命令：w100   结果：width:100px; 默认单位px
+    命令：w100p   结果：width:100%;
+    命令：h100r   结果：height: 100rem;-->
+  <link rel="stylesheet" href="#">
+  <script src="#"></script>
+  <img src="#" alt="#">
+  <input type="text" name="" id="">
+  <input type="button" value="">
+</body>
+
+</html>

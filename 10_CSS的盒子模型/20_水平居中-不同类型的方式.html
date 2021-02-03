@@ -68,7 +68,16 @@
         <!-- 4.行内块级元素: inline-block -->
         <!-- <span class="ib"></span> -->
 
-        <!-- 5.块级元素 -->
+        <!-- 5.块级元素 
+            * 不设置宽高，宽度继承自父元素，高度由内容行高撑起 
+              父元素设置text-align: center，内部盒子宽度还是父元素
+              宽度，居中不生效，text-align: center会继承到子元素，
+              子元素中的内容会居中
+            * 设置了宽高，即使父元素设置text-align: center，宽度
+              依然占据父元素宽度，居中也不生效，子元素继承
+              text-align: center属性，内容也会居中
+            * 内部块元素需要居中，需要在自己的样式中设置 margin: 0 auto;
+        -->
         <div class="block">哈哈哈</div>
         <span>呵呵呵</span>
     </div>

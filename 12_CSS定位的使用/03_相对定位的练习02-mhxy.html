@@ -20,8 +20,8 @@
             /* 1.向左移动img的一半 */
             position: relative;
             left: -960px;
-            /* left: -50%; */
-            /* transform: translate(-50%); */
+            /* left: -50%; left%相对于包含块，所以这种方式不行*/
+            /* transform: translate(-50%); 只能通过平移，相对于自己向左平移50%*/
 
             /* 2.向右移动父元素(.box)的一半 */
             margin-left: 50%;

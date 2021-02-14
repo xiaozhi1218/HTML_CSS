@@ -26,11 +26,17 @@
             width: 200px;
             height: 200px;
             
-            left: 0px;
+            /* 方式一： */
+            /* left: 0px;
             right: 0px;
             top: 0;
             bottom: 0;
-            margin: auto;
+            margin: auto; */
+
+            /* 方式二： 左和上距离包含块50%，在向左和向上平移自身的50%*/
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
 
             /* height: 100px; */
             background-color: yellowgreen;
